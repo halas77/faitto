@@ -1,0 +1,18 @@
+{
+  "name": "smart_contracts",
+  "version": "1.0.0",
+  "description": "Faitto smart contracts to handle a biomedical and medicines marketplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dawit Mellese",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.13"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
