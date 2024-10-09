@@ -30,6 +30,8 @@ const Header = () => {
     setOpenNavbar(!openNavbar);
   };
 
+ 
+
   return (
     <>
       <div
@@ -67,6 +69,7 @@ const Header = () => {
                     </Link>
                   </li>
                 ))}
+                
               </ul>
             </div>
             <div className="text-sm gap-2 block lg:hidden pr-3">

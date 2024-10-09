@@ -11,6 +11,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import ConnectWallet from "./components/ConnectWallet";
 import { MainProvider } from "./context/MainContext";
 
+
 function App() {
   return (
     <MainProvider>

@@ -1,12 +1,20 @@
 import { PiTreasureChestBold } from "react-icons/pi";
 import { FiCheckCircle } from "react-icons/fi";
+import { getProducts } from "../contract/manageProduct";
+
 const Hero = () => {
+  const handleClick = async () => {
+    const res = await getProducts();
+
+    console.log('res', res)
+  };
   return (
     <div className="bg-gradient-to-t  from-green-600/10 pt-10">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
         <div className="max-w-5xl text-center mx-auto">
           <h1 className="block font-bold text-gray-950 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-            A Transparent Marketplace for  <span className="text-green-600">Biomedical Products</span>
+            A Transparent Marketplace for{" "}
+            <span className="text-green-600">Biomedical Products</span>
           </h1>
         </div>
 
@@ -33,6 +41,9 @@ const Hero = () => {
             </p>
           </div>
         </div>
+        <button onClick={handleClick} className="px-8 py-3 bg-black text-white">
+          Click me
+        </button>
       </div>
     </div>
   );
