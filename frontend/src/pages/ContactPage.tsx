@@ -14,14 +14,6 @@ const ContactPage = () => {
               Contact us
             </h1>
           </div>
-
-          <div className="max-w-3xl text-center mx-auto">
-            <p className="text-lg text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-              provident id veritatis soluta quas doloribus sunt repellat saepe
-              repellendus perspiciatis.
-            </p>
-          </div>
         </div>
       </div>
       <div className="mx-auto min-h-screen max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">

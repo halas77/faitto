@@ -18,14 +18,6 @@ const ProductDetail = () => {
               Product Detail
             </h1>
           </div>
-
-          <div className="max-w-3xl text-center mx-auto">
-            <p className="text-lg text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-              provident id veritatis soluta quas doloribus sunt repellat saepe
-              repellendus perspiciatis.
-            </p>
-          </div>
         </div>
       </div>
 
