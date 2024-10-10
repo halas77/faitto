@@ -39,7 +39,6 @@ const ProductsPage = () => {
     handleGetItems();
   }, []);
 
-
   return (
     <>
       <div className="bg-green-600/10 pt-10">
@@ -48,14 +47,6 @@ const ProductsPage = () => {
             <h1 className="block font-semibold text-gray-900 text-4xl sm:text-4xl md:text-6xl lg:text-5xl">
               Products
             </h1>
-          </div>
-
-          <div className="max-w-3xl text-center mx-auto">
-            <p className="text-lg text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-              provident id veritatis soluta quas doloribus sunt repellat saepe
-              repellendus perspiciatis.
-            </p>
           </div>
         </div>
       </div>

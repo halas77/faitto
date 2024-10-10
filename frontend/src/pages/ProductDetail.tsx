@@ -60,10 +60,9 @@ const ProductDetail = () => {
 
                 {/* Product Description */}
                 <p className="text-gray-500 text-base font-normal mb-5">
-                  Introducing our vibrant Basic Yellow Tropical Printed Shirt -
-                  a celebration of style and sunshine! Embrace the essence of
-                  summer wherever you go with this eye-catching piece that
-                  effortlessly blends comfort and tropical flair.{" "}
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  provident id veritatis soluta quas doloribus sunt repellat
+                  saepe repellendus perspiciatis.
                 </p>
 
                 {/* Features List */}
