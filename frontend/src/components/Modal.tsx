@@ -19,8 +19,8 @@ const Modal = ({ id, setOpenModal, price }: CreateProductModalProp) => {
       const ethAmount = price;
       await pay({ id, ethAmount });
       setLoading(false);
-      window.location.reload();
       setOpenModal(false);
+      alert("Order completed!");
     } catch (error) {
       console.log("error", error);
       setLoading(false);

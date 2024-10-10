@@ -76,7 +76,7 @@ const ProductDetail = () => {
                   <li className="flex items-center gap-3">
                     <FaCheckCircle className="text-green-600" size={22} />
                     <span className="font-normal text-base text-gray-900">
-                      Price - {item.price}
+                      Price - {parseInt(item.price) / 10000000}
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
