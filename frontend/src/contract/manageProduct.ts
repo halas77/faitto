@@ -22,26 +22,31 @@ export const createProduct = async ({
   }
 };
 
-
 // getItems
 export const getProducts = async () => {
-    const contract = await getContract();
-    const productCounter = await contract.productCounter();
-  
-    const products = [];
-  
-    for (let i = 1; i <= productCounter; i++) {
-      const product = await contract.products(i);
-  
-      const formattedProduct = {
-        id: product.id.toString(),
-        name: product.name,
-        owner: product.currentOwner,
-        origin: product.origin,
-        price: product.price.toString(),
-        available: product.available,
-      };
-      products.push(formattedProduct);
-    }  
-    return products;
-  };
+  const contract = await getContract();
+  const productCounter = await contract.productCounter();
+
+  const products = [];
+
+  for (let i = 1; i <= productCounter; i++) {
+    const product = await contract.products(i);
+
+    const formattedProduct = {
+      id: product.id.toString(),
+      name: product.name,
+      owner: product.currentOwner,
+      origin: product.origin,
+      price: product.price.toString(),
+      available: product.available,
+    };
+    products.push(formattedProduct);
+  }
+  return products;
+};
+
+export const pay = async () => {
+  const contract = await getContract();
+
+  console.log('contract', contract)
+};

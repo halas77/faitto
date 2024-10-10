@@ -1,10 +1,14 @@
 import { FaStar, FaCheckCircle } from "react-icons/fa";
 import { imgURL } from "../utils/constants";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../components/Modal";
 
 const ProductDetail = () => {
   const location = useLocation();
   const item = location.state.item;
+
+  const [open, setOpen] = useState(false);
   return (
     <>
       <div className="bg-green-600/10 pt-10">
@@ -82,10 +86,14 @@ const ProductDetail = () => {
 
                 {/* Buy Button */}
                 <div className="flex items-center gap-3">
-                  <button className="text-center w-full px-5 py-4 rounded-[100px] bg-green-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-green-700 hover:shadow-green-400">
+                  <button
+                    onClick={() => setOpen(true)}
+                    className="text-center w-full px-5 py-4 rounded-[100px] bg-green-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-green-700 hover:shadow-green-400"
+                  >
                     Buy Now
                   </button>
                 </div>
+                {open && <Modal setOpenModal={setOpen} id={item.id} />}
               </div>
             </div>
           </div>
