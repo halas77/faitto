@@ -30,7 +30,7 @@ const ProductDetail = () => {
       </div>
 
       <section className="relative">
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-0 py-10">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-0 py-10 max-w-[84rem]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2">
             {/* Image Section */}
             <div className="max-h-[500px] ">
@@ -54,7 +54,7 @@ const ProductDetail = () => {
                 {/* Price and Rating */}
                 <div className="flex flex-col sm:flex-row sm:items-center mb-6">
                   <h6 className="font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5">
-                    {item.price}
+                    {parseInt(item.price) / 10000000}
                   </h6>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1 text-yellow-500">
@@ -79,7 +79,19 @@ const ProductDetail = () => {
                   <li className="flex items-center gap-3">
                     <FaCheckCircle className="text-green-600" size={22} />
                     <span className="font-normal text-base text-gray-900">
-                      Branded Shirt
+                      Name - {item.name}
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <FaCheckCircle className="text-green-600" size={22} />
+                    <span className="font-normal text-base text-gray-900">
+                      Price - {item.price}
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <FaCheckCircle className="text-green-600" size={22} />
+                    <span className="font-normal text-base capitalize text-gray-900">
+                      Origin - {item.origin}
                     </span>
                   </li>
                 </ul>
@@ -93,7 +105,13 @@ const ProductDetail = () => {
                     Buy Now
                   </button>
                 </div>
-                {open && <Modal setOpenModal={setOpen} id={item.id} />}
+                {open && (
+                  <Modal
+                    price={item.price}
+                    setOpenModal={setOpen}
+                    id={item.id}
+                  />
+                )}
               </div>
             </div>
           </div>

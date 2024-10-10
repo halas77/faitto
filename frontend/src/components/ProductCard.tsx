@@ -23,7 +23,11 @@ const ProductCard = ({ name, price, id }: ProductCardType) => {
         </Link>
         <div className="mt-2 mb-5 flex items-center justify-between">
           <p>
-            <span className="text-3xl font-bold text-slate-900">{price}</span>
+            <span className="text-xl font-bold text-slate-900">
+              {parseInt(price) / 10000000}
+
+              <span className="text-sm font-normal ml-1">ETH</span>
+            </span>
           </p>
           <div className="flex items-center">
             <FaStar className="text-yellow-400" />

@@ -33,6 +33,9 @@ const Product = () => {
 
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <p className="text-2xl text-gray-800 font-bold lg:text-3xl lg:pb-10 capitalize">
+        Find medical products
+      </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <>
           {loading ? (

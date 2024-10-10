@@ -110,15 +110,15 @@ const SocialLinks = () => {
           <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
         </svg>
         <div className="grow">
-          <h3 className="font-semibold text-gray-800">Developer APIs</h3>
+          <h3 className="font-semibold text-gray-800">About us</h3>
           <p className="mt-1 text-sm text-gray-500">
-            Check out our development quickstart guide.
+            Check out our company history.
           </p>
           <a
             className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800"
             href="#"
           >
-            Contact sales
+            
             <svg
               className="shrink-0 size-2.5 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1"
               width="16"

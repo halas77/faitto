@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import { getContract } from ".";
 
 interface CreateProductProps {
@@ -45,8 +46,21 @@ export const getProducts = async () => {
   return products;
 };
 
-export const pay = async () => {
-  const contract = await getContract();
+interface PayProps {
+  id: string;
+  ethAmount: string;
+}
 
-  console.log('contract', contract)
+export const pay = async ({ id, ethAmount }: PayProps) => {
+  const contract = await getContract();
+  const amount = (parseInt(ethAmount) / 10000000).toString()
+  const valueInWei = ethers.utils.parseEther(amount);
+
+  const res = await contract.purchaseProduct(id, {
+    value: valueInWei, 
+  });
+
+  res.wait();
+
+  console.log("contract", contract);
 };

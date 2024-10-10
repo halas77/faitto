@@ -30,12 +30,10 @@ const Header = () => {
     setOpenNavbar(!openNavbar);
   };
 
- 
-
   return (
     <>
       <div
-        className={`top-0 left-0 w-full fixed z-[9999] transition-all duration-300 ${
+        className={`top-0 left-0 w-full fixed z-[999] transition-all duration-300 ${
           scrolled ? "bg-white" : "bg-transparent"
         }`}
       >
@@ -43,8 +41,9 @@ const Header = () => {
           <div className="flex justify-between items-center">
             <Link
               to="/"
-              className="text-3xl font-semibold text-gray-950 flex gap-2 items-center max-sm:pl-4"
+              className="text-2xl font-semibold text-gray-950 flex gap-2 items-center max-sm:pl-4"
             >
+              <img src="/logo.svg" alt="Logo Image" className="w-14 h-14 rounded-full"/>
               Faitto.
             </Link>
 
@@ -69,7 +68,6 @@ const Header = () => {
                     </Link>
                   </li>
                 ))}
-                
               </ul>
             </div>
             <div className="text-sm gap-2 block lg:hidden pr-3">

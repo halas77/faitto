@@ -21,9 +21,9 @@ const Loader = () => {
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="flex gap-2 justify-center items-center my-4">
             <img
-              src="/FaittoLogo.png"
+              src="/logo.svg"
               alt="Logo Image"
-              className="w-9 h-9 bg-gray-950 p-1
+              className="w-12 h-12 
               rounded-full"
             />
             <h1 className="text-2xl font-semibold text-gray-900">Faitto.</h1>
