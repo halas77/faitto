@@ -5,15 +5,15 @@ const Ecommerce = () => {
     <div>
       <section className="pt-28">
         <div className="mx-auto max-w-[83rem] px-4 sm:px-0 lg:px-0">
-          <div className="xl:p-16 gap-32 p-12 bg-gradient-to-r from-green-950 to-teal-900   rounded-3xl flex  justify-between flex-col-reverse lg:flex-row">
+          <div className="xl:p-16 gap-32 p-8 lg:p-12 bg-gradient-to-r from-green-950 to-teal-900 rounded-3xl flex  justify-between flex-col-reverse lg:flex-row">
             <div className="w-full lg:w-2/3">
               <p className="px-2 py-1 border w-48 text-center rounded-full text-sm font-medium text-green-100 mb-3 border-green-100">
                 Verified by Blockchain
               </p>
-              <h2 className="font-manrope text-5xl text-white font-semibold mb-7 text-center lg:text-left leading-snug">
+              <h2 className=" text-5xl text-white font-semibold mb-7 text-left leading-snug">
                 A Transparent Marketplace for Medical Products
               </h2>
-              <p className="text-lg text-white leading-8 mb-12 text-center lg:text-left">
+              <p className="text-lg text-white leading-8 mb-12 text-left">
                 Access authentic medicines and biomedical tools with{" "}
                 <span className=" bg-green-100 text-[19px] text-green-950 font-semibold px-3 italic rounded-lg">
                   full traceability
