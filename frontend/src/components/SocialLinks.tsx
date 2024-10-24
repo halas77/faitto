@@ -1,9 +1,9 @@
 const SocialLinks = () => {
   return (
-    <div className="divide-y divide-gray-200">
+    <div className="divide-y divide-green-900/50">
       <div className="flex gap-x-7 py-6">
         <svg
-          className="shrink-0 size-6 mt-1.5 text-gray-800"
+          className="shrink-0 size-6 mt-1.5 text-gray-200"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -19,12 +19,12 @@ const SocialLinks = () => {
           <path d="M12 17h.01" />
         </svg>
         <div className="grow">
-          <h3 className="font-semibold text-gray-800">Knowledgebase</h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <h3 className="font-semibold text-gray-200">Knowledgebase</h3>
+          <p className="mt-1 text-sm text-gray-300">
             We're here to help with any questions or code.
           </p>
           <a
-            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800"
+            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-50 hover:text-gray-200 focus:outline-none focus:text-gray-200"
             href="#"
           >
             Contact support
@@ -49,7 +49,7 @@ const SocialLinks = () => {
 
       <div className="flex gap-x-7 py-6">
         <svg
-          className="shrink-0 size-6 mt-1.5 text-gray-800"
+          className="shrink-0 size-6 mt-1.5 text-gray-200"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -64,12 +64,12 @@ const SocialLinks = () => {
           <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
         </svg>
         <div className="grow">
-          <h3 className="font-semibold text-gray-800">FAQ</h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <h3 className="font-semibold text-gray-200">FAQ</h3>
+          <p className="mt-1 text-sm text-gray-300">
             Search our FAQ for answers to anything you might ask.
           </p>
           <a
-            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800"
+            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-50 hover:text-gray-200 focus:outline-none focus:text-gray-200"
             href="#"
           >
             Visit FAQ
@@ -94,7 +94,7 @@ const SocialLinks = () => {
 
       <div className=" flex gap-x-7 py-6">
         <svg
-          className="shrink-0 size-6 mt-1.5 text-gray-800"
+          className="shrink-0 size-6 mt-1.5 text-gray-200"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -110,15 +110,15 @@ const SocialLinks = () => {
           <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
         </svg>
         <div className="grow">
-          <h3 className="font-semibold text-gray-800">About us</h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <h3 className="font-semibold text-gray-200">About us</h3>
+          <p className="mt-1 text-sm text-gray-300">
             Check out our company history.
           </p>
           <a
-            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800"
+            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-50 hover:text-gray-200 focus:outline-none focus:text-gray-200"
             href="#"
           >
-            
+            Contact us
             <svg
               className="shrink-0 size-2.5 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1"
               width="16"
@@ -140,7 +140,7 @@ const SocialLinks = () => {
 
       <div className=" flex gap-x-7 py-6">
         <svg
-          className="shrink-0 size-6 mt-1.5 text-gray-800"
+          className="shrink-0 size-6 mt-1.5 text-gray-200"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -155,12 +155,12 @@ const SocialLinks = () => {
           <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
         </svg>
         <div className="grow">
-          <h3 className="font-semibold text-gray-800">Contact us by email</h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <h3 className="font-semibold text-gray-200">Contact us by email</h3>
+          <p className="mt-1 text-sm text-gray-300">
             If you wish to write us an email instead please use
           </p>
           <a
-            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800"
+            className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-50 hover:text-gray-200 focus:outline-none focus:text-gray-200"
             href="#"
           >
             example@site.com

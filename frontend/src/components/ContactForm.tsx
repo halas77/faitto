@@ -38,8 +38,8 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="flex flex-col rounded-xl border border-gray-300 p-4  sm:p-6 lg:p-8">
-      <h2 className="mb-8 text-2xl font-semibold text-gray-900 ">
+    <div className="flex flex-col rounded-xl border border-green-900 bg-green-800/10 backdrop-blur-sm p-4  sm:p-6 lg:p-8">
+      <h2 className="mb-8 text-2xl font-semibold text-gray-50 ">
         Send us an email
       </h2>
 

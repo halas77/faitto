@@ -1,85 +1,96 @@
-import { FiShoppingCart, FiShield } from "react-icons/fi";
-import { GiMedicines, GiMicroscope } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
+import { GiMedicines, GiNetworkBars, GiLifeSupport } from "react-icons/gi";
+import { imgURL } from "../utils/constants";
 
 const Service = () => {
   return (
-    <div className="bg-white rounded-2xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-      <div className="grid md:grid-cols-2 px-4 sm:px-6 lg:px-8 gap-12 max-w-[85rem] mx-auto">
-        <div className="lg:w-3/4">
-          <h2 className="text-2xl text-gray-800 font-bold lg:text-3xl">
-            Marketplace for Biomedical Tools & Medicines Powered by Blockchain
-          </h2>
-          <p className="mt-3 text-gray-800">
-            Discover a decentralized platform that connects suppliers and buyers
-            of biomedical tools and medicines, ensuring secure, transparent, and
-            efficient transactions powered by blockchain technology.
-          </p>
-          <p className="mt-5">
-            <Link
-              className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
-              to="/about"
-            >
-              Learn more about our platform
-              <FiShoppingCart className="shrink-0 size-4 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1" />
-            </Link>
-          </p>
+    <section className="py-10">
+      <div className="mx-auto max-w-[83rem] px-4 sm:px-0 lg:px-0">
+        <div className="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+          <div className="relative w-full text-center lg:text-left lg:w-2/4">
+            <h2 className="text-4xl font-bold text-gray-800 leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-lg lg:mx-0">
+              Transparent, Traceble, Authentic Products
+            </h2>
+          </div>
+          <div className="relative w-full text-start lg:text-left lg:w-2/4">
+            <p className="font-normal text-gray-700 mb-5">
+              Explore a decentralized marketplace that connects suppliers with
+              buyers for authentic biomedical tools and medicines. Powered by
+              blockchain, our platform ensures trust, transparency, and secure
+              transactions every step of the way.
+            </p>
+          </div>
         </div>
-
-        <div className="space-y-6 lg:space-y-10">
-          {/* Feature 1: Blockchain-Powered Transactions */}
-          <div className="flex gap-x-5 sm:gap-x-8">
-            <span className="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm mx-auto">
-              <FiShield className="shrink-0 size-5" />
-            </span>
-            <div className="grow">
-              <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-                Secure Blockchain Transactions
-              </h3>
-              <p className="mt-1 text-gray-600">
-                Our platform ensures transparent and tamper-proof transactions
-                for buying and selling biomedical tools and medicines,
-                safeguarded by blockchain technology.
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
+          <div className="relative w-full h-auto md:col-span-2">
+            <div className="bg-green-950 rounded-2xl flex justify-between flex-row flex-wrap">
+              <div className="p-5 xl:p-8 w-full md:w-1/2">
+                <div className="block">
+                  <GiMedicines size={30} color="white" />
+                </div>
+                <h3 className="text-lg font-bold xl:text-xl text-white py-5 w-full xl:w-64">
+                  Seamless Access to Authentic Products
+                </h3>
+                <p className="text-sm font-normal text-gray-200 w-full mb-8 xl:w-64">
+                  Instantly browse and purchase certified biomedical tools and
+                  medicines in just a few clicks. No delays, no paperwork—just
+                  fast, secure transactions.
+                </p>
+                <button className="py-2 px-5 border border-solid border-gray-300 rounded-full gap-2 text-sm text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                  Learn More
+                  <FiArrowRight size={10} />
+                </button>
+              </div>
+              <div className="relative hidden h-auto md:w-1/2 md:block">
+                <img
+                  src={imgURL}
+                  alt="Medical Products"
+                  className="h-full ml-auto object-cover rounded-r-2xl"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Feature 2: Biomedical Tools */}
-          <div className="flex gap-x-5 sm:gap-x-8">
-            <span className="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm mx-auto">
-              <GiMicroscope className="shrink-0 size-5" />
-            </span>
-            <div className="grow">
-              <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-                Biomedical Tools Marketplace
+          <div className="relative w-full h-auto">
+            <div className="bg-green-800 rounded-2xl p-5 xl:p-8 h-full">
+              <div className="block">
+                <GiNetworkBars size={30} color="white" />
+              </div>
+              <h3 className="py-5 text-white text-lg font-bold xl:text-xl">
+                Advanced Supply Chain Transparency
               </h3>
-              <p className="mt-1 text-gray-600">
-                Explore a wide variety of biomedical tools, from diagnostic
-                devices to laboratory equipment, all available on our
-                decentralized marketplace.
+              <p className="text-sm font-normal text-white mb-8">
+                Track every product’s journey from manufacturer to delivery with
+                blockchain-enabled traceability, ensuring full transparency.
               </p>
+              <button className="py-2 px-5 border border-solid border-gray-300 rounded-full gap-2 text-sm text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                Learn More
+                <FiArrowRight size={10} />
+              </button>
             </div>
           </div>
 
-          {/* Feature 3: Medicines */}
-          <div className="flex gap-x-5 sm:gap-x-8">
-            <span className="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm mx-auto">
-              <GiMedicines className="shrink-0 size-5" />
-            </span>
-            <div className="grow">
-              <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-                Wide Range of Medicines
+          <div className="relative w-full h-auto">
+            <div className="bg-green-700 rounded-2xl p-5 xl:p-8 h-full">
+              <div className="block">
+                <GiLifeSupport size={30} color="white" />
+              </div>
+              <h3 className="py-5 text-white text-lg font-bold xl:text-xl">
+                Guaranteed Product Authenticity
               </h3>
-              <p className="mt-1 text-gray-600">
-                Access a comprehensive selection of medicines and pharmaceutical
-                products from verified suppliers, with blockchain ensuring
-                quality and transparency.
+              <p className="text-sm font-normal text-white mb-8">
+                Every product is verified to prevent counterfeits, ensuring only
+                authentic biomedical tools and medicines reach our customers.
               </p>
+              <button className="py-2 px-5 border border-solid border-gray-300 rounded-full gap-2 text-sm text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                Learn More
+                <FiArrowRight size={10} />
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
