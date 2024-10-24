@@ -52,7 +52,7 @@ const Service = () => {
           </div>
 
           <div className="relative w-full h-auto">
-            <div className="bg-green-800 rounded-2xl p-5 xl:p-8 h-full">
+            <div className="bg-green-900 rounded-2xl p-5 xl:p-8 h-full">
               <div className="block">
                 <GiNetworkBars size={30} color="white" />
               </div>
@@ -71,7 +71,7 @@ const Service = () => {
           </div>
 
           <div className="relative w-full h-auto">
-            <div className="bg-green-700 rounded-2xl p-5 xl:p-8 h-full">
+            <div className="bg-green-900 rounded-2xl p-5 xl:p-8 h-full">
               <div className="block">
                 <GiLifeSupport size={30} color="white" />
               </div>

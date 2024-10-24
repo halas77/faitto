@@ -1,55 +1,63 @@
+
 const AboutPageDetail = () => {
   return (
-    <div className="max-w-[85rem] px-4sm:px-6 lg:px-8  mx-auto">
-      <div className="mt-5 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:gap-12">
-        <div className="lg:col-span-1">
-          <h2 className="font-bold text-2xl md:text-3xl text-gray-800">
-            We tackle the challenges start-ups face
-          </h2>
-          <p className="mt-2 md:mt-4 text-gray-500">
-            Besides working with start-up enterprises as a partner for
-            digitalization, we have built enterprise products for common pain
-            points that we have encountered in various products and projects.
-          </p>
-        </div>
+    <section className="relative xl:mr-0 lg:mr-5 mr-0">
+      <div className="w-full max-w-7xl px-4 md:px-5 lg:px-0 mx-auto">
+        <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
+          <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
+            <div className="w-full flex-col justify-center items-start gap-8 flex">
+              <div className="flex-col justify-start lg:items-start items-start gap-4 flex">
+               
+                <div className="w-full flex-col justify-start lg:items-start items-start gap-3 flex">
+                  <h2 className="text-green-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                    Faitto. 
+                  </h2>
+                  <p className="text-gray-700 text-base font-normal leading-relaxed lg:text-start text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cum atque fugiat magni unde tenetur dolorem deleniti voluptatibus similique tempore, cupiditate, quam architecto sunt consectetur qui! Voluptatibus ratione laudantium neque numquam, amet, facere sapiente vitae id quisquam natus minus fugit a expedita culpa labore adipisci asperiores magni eaque quas iste minima possimus tenetur voluptate ipsum. Earum, non quod beatae repellat in hic obcaecati ratione, suscipit rerum ducimus sit ipsam. Autem hic dicta officia porro enim, quibusdam voluptates fugit possimus necessitatibus laudantium ipsa iste eum. Aperiam expedita deleniti, et amet dolorum mollitia fugit aspernatur neque at placeat culpa esse error excepturi.
 
-        <div className="lg:col-span-2">
-          <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
-            {[0, 1, 2, 3].map((item) => (
-              <div key={item} className="flex gap-x-5">
-                <svg
-                  className="shrink-0 mt-1 size-6 text-green-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect width="18" height="10" x="3" y="11" rx="2" />
-                  <circle cx="12" cy="5" r="2" />
-                  <path d="M12 7v4" />
-                  <line x1="8" x2="8" y1="16" y2="16" />
-                  <line x1="16" x2="16" y1="16" y2="16" />
-                </svg>
-                <div className="grow">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    Creative minds
-                  </h3>
-                  <p className="mt-1 text-gray-600">
-                    We choose our teams carefully. Our people are the secret to
-                    great work.
                   </p>
                 </div>
               </div>
-            ))}
+             
+            </div>
+          </div>
+          <div className="w-full lg:justify-start justify-center items-start flex">
+            <div className="w-full justify-start items-center gap-4 grid grid-cols-1">
+              <div className="w-full h-full p-6 rounded-xl border border-gray-200 bg-white hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                <h4 className="text-gray-800 text-xl font-semibold font-manrope leading-9">
+                  Mission
+                </h4>
+                <p className="text-gray-700 text-base font-normal leading-relaxed">
+                  Our mission is to deliver a trusted marketplace that ensures
+                  the authenticity, safety, and accessibility of medical
+                  products through blockchain technology.
+                </p>
+              </div>
+              <div className="w-full h-full p-6 rounded-xl border border-gray-200 bg-white hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                <h4 className="text-gray-800 text-xl font-semibold font-manrope leading-9">
+                  Vision
+                </h4>
+                <p className="text-gray-700 text-base font-normal leading-relaxed">
+                  Our vision is to build a blockchain-powered marketplace for
+                  medical products that ensures transparency, authenticity, and
+                  safety.
+                </p>
+              </div>
+              <div className="w-full h-full p-6 rounded-xl border border-gray-200 bg-white hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                <h4 className="text-gray-800 text-xl font-semibold font-manrope leading-9">
+                  Goal
+                </h4>
+                <p className="text-gray-700 text-base font-normal leading-relaxed">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  impedit reprehenderit laborum nostrum officia vel suscipit
+                  obcaecati
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

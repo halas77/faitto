@@ -71,9 +71,6 @@ const Footer = () => {
                 >
                   Careers
                 </a>{" "}
-                <span className="inline-block ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">
-                  We're hiring
-                </span>
               </p>
               <p>
                 <a
@@ -97,12 +94,12 @@ const Footer = () => {
                     type="text"
                     id="hero-input"
                     name="hero-input"
-                    className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                    className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-green-500 focus:ring-green-500 disabled:opacity-50 disabled:pointer-events-none"
                     placeholder="Enter your email"
                   />
                 </div>
                 <a
-                  className="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                  className="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:bg-green-700 disabled:opacity-50 disabled:pointer-events-none"
                   href="#"
                 >
                   Subscribe
@@ -117,7 +114,7 @@ const Footer = () => {
 
         <div className="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
           <div className="flex justify-between items-center">
-            <p className="text-sm text-gray-400">© 2024 Preline Labs.</p>
+            <p className="text-sm text-gray-400">© 2024 Faitto.</p>
           </div>
 
           <div>

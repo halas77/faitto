@@ -14,8 +14,8 @@ const Product = () => {
       </p>
       <div className="flex gap-3 pb-5 max-w-7xl overflow-hidden">
         {filterTagLabels.map((item, index) => (
-          <div onClick={() => setCurrent(item.label)}>
-            <FilterTag active={current} label={item.label} key={index} />
+          <div key={index} onClick={() => setCurrent(item.label)}>
+            <FilterTag active={current} label={item.label} />
           </div>
         ))}
       </div>

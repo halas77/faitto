@@ -14,7 +14,7 @@ const ProductCard = ({ name, price, id, features }: ProductCardType) => {
     <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-xl border border-gray-100 bg-white">
       <Link
         className="relative  flex h-60 overflow-hidden rounded-t-xl"
-        to={`/product/${id}`}
+        to={`/product/category/${id}`}
       >
         <img className="object-cover" src={imgURL} alt="product image" />
       </Link>

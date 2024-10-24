@@ -38,7 +38,7 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="flex flex-col rounded-xl border border-green-900 bg-green-800/10 backdrop-blur-sm p-4  sm:p-6 lg:p-8">
+    <div className="flex flex-col rounded-xl border border-green-900/50 bg-green-900/10 backdrop-blur-sm p-4 shadow  sm:p-6 lg:p-8">
       <h2 className="mb-8 text-2xl font-semibold text-gray-50 ">
         Send us an email
       </h2>
@@ -92,7 +92,7 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg bg-green-600 px-4 py-3 text-sm font-medium text-gray-50 hover:bg-gray-300 focus:bg-gray-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-600   -400"
+            className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg bg-green-700 px-4 py-3 text-sm font-medium text-gray-50 hover:bg-green-800 focus:bg-gray-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-600   -400"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>

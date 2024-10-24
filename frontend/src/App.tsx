@@ -10,6 +10,7 @@ import ContactPage from "./pages/ContactPage";
 import PrivateRoute from "./components/PrivateRoute";
 import ConnectWallet from "./components/ConnectWallet";
 import { MainProvider } from "./context/MainContext";
+import CategoryDetailPage from "./pages/CategoryDetailPage";
 
 function App() {
   return (
@@ -26,7 +27,14 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/products" element={<ProductsPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
+                <Route
+                  path="/product/category/:id"
+                  element={<ProductDetail />}
+                />
+                <Route
+                  path="/product/category"
+                  element={<CategoryDetailPage />}
+                />
               </Route>
             </Routes>
           </div>
