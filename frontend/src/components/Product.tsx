@@ -1,11 +1,30 @@
 import Button from "./Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FilterTag from "./FilterTag";
-import { filterTagLabels, pharmacyProducts } from "../utils/constants";
+import { filterTagLabels } from "../utils/constants";
 import ProductCard from "./ProductCard";
+import { ProductData } from "../utils/types";
+import { supabase } from "../supabaseClient";
+import ProductSkeleton from "./ProductSkeleton";
 
 const Product = () => {
   const [current, setCurrent] = useState("All");
+
+  const [loading, setLoading] = useState(false);
+  const [batchs, setBatchs] = useState<ProductData[]>([]);
+
+  // Fetch items
+  const fetchItems = async () => {
+    setLoading(true);
+    const { data } = await supabase.from("product").select("*");
+    setBatchs(data || []);
+    setLoading(false);
+    console.log("batchs", data);
+  };
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
 
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 mx-auto">
@@ -20,15 +39,27 @@ const Product = () => {
         ))}
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {pharmacyProducts.map((item, index) => (
-          <ProductCard
-            features={item.feature}
-            name={item.name}
-            id={item.id}
-            price={item.price}
-            key={index}
-          />
-        ))}
+        {loading ? (
+          <>
+            <ProductSkeleton />
+            <ProductSkeleton />
+            <ProductSkeleton />
+            <ProductSkeleton />
+          </>
+        ) : (
+          <>
+            {batchs.map((item, index) => (
+              <ProductCard
+                features={item?.productDesc}
+                name={item?.productName}
+                id={item?.id}
+                batchId={item?.batchId}
+                price={item.price}
+                key={index}
+              />
+            ))}
+          </>
+        )}
       </div>
       <div className="pt-10">
         <Button />

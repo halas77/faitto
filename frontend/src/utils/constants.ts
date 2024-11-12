@@ -1,6 +1,6 @@
 import abi from "./abi.json";
 
-export const contractAddress = "0x6d69D935e5416289da544Fc1E9d0a41266ef1133";
+export const contractAddress = "0x46Cc5737539a468Ef7B867Fe8e5e1AbE3Dc3393e";
 
 export const contractABI = abi.abi;
 
@@ -25,8 +25,6 @@ export const nav_links = [
     href: "/contact",
   },
 ];
-
-
 
 export const filterTagLabels = [
   {
@@ -115,3 +113,9 @@ export const pharmacyProducts = [
     price: "$19.99",
   },
 ];
+
+export const productImages = {
+  2: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731344869221-para.jpg",
+  3: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731345723536-amoxa.jpg",
+  4: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731350751603-lora.jpg",
+};
