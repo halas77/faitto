@@ -6,8 +6,8 @@ interface ProductCardType {
   id: string;
   features: string;
   name: string;
-  batchId: string;
-  price: number;
+  batchId: string | number;
+  price: number | string;
 }
 
 const ProductCard = ({
@@ -17,8 +17,8 @@ const ProductCard = ({
   batchId,
   price,
 }: ProductCardType) => {
-  const getImage = (batchId: string) => {
-    return productImages[batchId];
+  const getImage = (batchId: string | number) => {
+    return productImages[Number(batchId) as keyof typeof productImages];
   };
   return (
     <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-xl border border-gray-100 bg-white">

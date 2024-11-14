@@ -114,7 +114,7 @@ export const pharmacyProducts = [
   },
 ];
 
-export const productImages = {
+export const productImages:{ 2: string; 3: string; 4: string } = {
   2: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731344869221-para.jpg",
   3: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731345723536-amoxa.jpg",
   4: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731350751603-lora.jpg",

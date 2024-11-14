@@ -1,5 +1,5 @@
 import { supabase } from "../supabaseClient";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ProductData, ProductFormData } from "../utils/types";
 import { FiUser } from "react-icons/fi";
@@ -21,7 +21,7 @@ const BatchDetail = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState<ProductData | null>(null);
   const [batchData, setBatchData] = useState<ProductFormData | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
 
   const [openModal, setOpenModal] = useState(false);
 
@@ -54,7 +54,7 @@ const BatchDetail = () => {
       getBatch();
     }
   }, []);
-  
+
   // const expirationDate = data?.expirationDate
   //   ? new Date(data.expirationDate)
   //   : null;
@@ -62,8 +62,8 @@ const BatchDetail = () => {
   //   ? formatDate2(expirationDate)
   //   : "Invalid Date";
 
-  const getImage = (batchId: string | number | undefined) => {
-    return productImages[batchId];
+  const getImage = (batchId: string | number) => {
+    return productImages[Number(batchId) as keyof typeof productImages];
   };
 
   return (
@@ -73,7 +73,7 @@ const BatchDetail = () => {
           {/* Image Container */}
           <div className=" lg:col-span-2 flex justify-center lg:justify-end">
             <img
-              src={getImage(productData?.batchId) || imgURL}
+              src={(productData && getImage(productData.batchId)) || imgURL}
               alt="Yellow Tropical Printed Shirt"
               className="max-h-[70vh] w-full object-cover p-4 lg:p-16"
             />

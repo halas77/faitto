@@ -26,7 +26,7 @@ const Header = () => {
               <img
                 src="/faittoLogo.png"
                 alt="Logo"
-                className="h-14 w-14 rounded"
+                className="h-8 w-8 rounded mr-2"
               />
               <p className="text-green-900 font-bold text-2xl">Faitto.</p>
             </div>

@@ -13,6 +13,7 @@ const CategoryDetailPage = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
           {pharmacyProducts.map((item, index) => (
             <ProductCard
+              batchId={item.id}
               features={item.feature}
               name={item.name}
               id={item.id}
