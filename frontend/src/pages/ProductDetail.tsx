@@ -40,12 +40,15 @@ const BatchDetail = () => {
   };
 
   const getBatch = async () => {
+    console.log("batchId", batchId);
     setLoading(true);
     const { data } = await supabase
       .from("batch")
       .select("*")
       .eq("batchId", batchId)
       .single();
+
+    console.log("batch", data);
     setBatchData(data);
     setLoading(false);
   };
