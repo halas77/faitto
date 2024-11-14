@@ -1,6 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import TitleBar from "../components/TitleBar";
-import { pharmacyProducts } from "../utils/constants";
+import { imgURL, pharmacyProducts } from "../utils/constants";
 
 const CategoryDetailPage = () => {
   return (
@@ -14,6 +14,7 @@ const CategoryDetailPage = () => {
           {pharmacyProducts.map((item, index) => (
             <ProductCard
               batchId={item.id}
+              image={imgURL}
               features={item.feature}
               name={item.name}
               id={item.id}
