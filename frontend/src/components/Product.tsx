@@ -50,12 +50,13 @@ const Product = () => {
           <>
             {batchs.map((item, index) => (
               <ProductCard
+                batchId={item.batchId}
                 features={item?.productDesc}
                 name={item?.productName}
                 id={item?.id}
-                batchId={item?.batchId}
                 price={item.price}
                 key={index}
+                image={item.image}
               />
             ))}
           </>

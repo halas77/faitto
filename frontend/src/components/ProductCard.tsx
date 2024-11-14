@@ -1,43 +1,51 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
-import { imgURL, productImages } from "../utils/constants";
+import { imgURL } from "../utils/constants";
 
 interface ProductCardType {
   id: string;
   features: string;
   name: string;
-  batchId: string | number;
   price: number | string;
+  image: string;
+  batchId: string | number;
 }
 
 const ProductCard = ({
   name,
   id,
   features,
-  batchId,
   price,
+  image,
+  batchId,
 }: ProductCardType) => {
-  const getImage = (batchId: string | number) => {
-    return productImages[Number(batchId) as keyof typeof productImages];
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/product/category/${id}`, {
+      state: {
+        batchId: batchId,
+      },
+    });
   };
+
   return (
-    <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-xl border border-gray-100 bg-white">
-      <Link
-        className="relative  flex h-60 overflow-hidden rounded-t-xl"
-        to={`/product/category/${id}`}
-      >
+    <div
+      onClick={handleClick}
+      className="relative flex w-full max-w-xs flex-col cursor-pointer hover:scale-105 ease-in-out duration-200 overflow-hidden rounded-xl border border-gray-100 bg-white"
+    >
+      <div className="relative  flex h-60 overflow-hidden rounded-t-xl">
         <img
           className="object-cover"
-          src={getImage(batchId) || imgURL}
+          src={image || imgURL}
           alt="product image"
         />
-      </Link>
+      </div>
       <div className="mt-4 px-5 pb-5">
-        <Link to={`/product/category/${id}`}>
+        <div>
           <h5 className="text-lg font-semibold text-slate-900">{name}</h5>
 
           <p className="text-xs py-2">{features.slice(0, 60)}..</p>
-        </Link>
+        </div>
         <div className="mt-2 mb-5 flex items-center justify-between">
           <p>
             <span className="text-xl font-bold text-slate-900">${price}</span>

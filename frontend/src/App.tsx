@@ -19,7 +19,6 @@ function AppContent() {
     <div className="bg-gray-50">
       <ScrollToTop />
       {location.pathname !== "/connect-wallet" && <Header />}
-      
       <Routes>
         <Route path="/connect-wallet" element={<ConnectWallet />} />
         <Route element={<PrivateRoute />}>

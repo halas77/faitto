@@ -18,6 +18,7 @@ export interface ProductData {
   productDesc: string;
   batchId: string | number;
   price: number;
+  image: string
 }
 
 export interface ProductHistoryType {
