@@ -33,7 +33,7 @@ const ProductCard = ({
       onClick={handleClick}
       className="relative flex w-full max-w-xs flex-col cursor-pointer hover:scale-105 ease-in-out duration-200 overflow-hidden rounded-xl border border-gray-100 bg-white"
     >
-      <div className="relative  flex h-60 overflow-hidden rounded-t-xl">
+      <div className="relative mx-auto  flex h-60 overflow-hidden rounded-t-xl">
         <img
           className="object-cover"
           src={image || imgURL}
