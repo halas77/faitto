@@ -33,7 +33,7 @@ const ConnectWallet = () => {
         <div className="mt-6">
           <button
             onClick={() => handleConnectWallet()}
-            className="w-full py-3 px-4 flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-gradient-to-r from-green-400 to-green-600 text-white hover:from-green-800 hover:to-green-800 focus:outline-none "
+            className="w-full py-3 px-4 flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-gradient-to-r from-green-800 to-green-950 text-white hover:from-green-800 hover:to-green-800 focus:outline-none "
           >
             Connect Wallet
           </button>

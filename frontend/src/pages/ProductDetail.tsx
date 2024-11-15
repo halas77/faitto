@@ -140,6 +140,7 @@ const BatchDetail = () => {
                     <p"
                     />
                     <p className="font-medium">Expire Date:</p>
+                    <p>{batchData?.expirationDate ?? "N/A"}</p>
                   </div>
 
                   <div className="flex items-center gap-3 text-gray-600 py-4">
