@@ -28,9 +28,9 @@ const Ecommerce = () => {
             </div>
             <div className="w-full lg:w-2/6 relative hidden lg:flex">
               <img
-                src="https://placehold.co/500X600"
+                src="/hero.png"
                 alt="CTA tailwind section"
-                className="xl:absolute xl:bottom-0 rounded-t-3xl -mb-12 mx-auto lg:-mb-12 xl:-mb-16 lg:mx-0 object-cover"
+                className="xl:absolute xl:bottom-0 xl:-top-10 rounded-t-3xl -mb-12 mx-auto lg:-mb-12 xl:-mb-16 lg:mx-0 object-cover"
               />
             </div>
           </div>
