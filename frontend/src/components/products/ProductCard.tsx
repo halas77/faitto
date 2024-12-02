@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
-import { imgURL } from "../utils/constants";
+import { imgURL } from "../../utils/constants";
 
 interface ProductCardType {
   id: string;
@@ -42,7 +42,7 @@ const ProductCard = ({
       </div>
       <div className="mt-4 px-5 pb-5">
         <div>
-          <h5 className="text-lg font-semibold text-slate-900">{name}</h5>
+          <h5 className="text-base font-semibold text-slate-900">{name}</h5>
 
           <p className="text-xs py-2">{features.slice(0, 60)}..</p>
         </div>

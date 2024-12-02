@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { imgURL } from "../utils/constants";
+import { imgURL } from "../../utils/constants";
 
 const About = () => {
   const location = useLocation();

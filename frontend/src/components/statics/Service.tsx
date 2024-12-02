@@ -1,6 +1,6 @@
 import { FiArrowRight } from "react-icons/fi";
 import { GiMedicines, GiNetworkBars, GiLifeSupport } from "react-icons/gi";
-import { imgURL } from "../utils/constants";
+import { imgURL } from "../../utils/constants";
 
 const Service = () => {
   return (

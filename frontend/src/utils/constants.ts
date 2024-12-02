@@ -1,3 +1,14 @@
+import {
+  FaHeartbeat,
+  FaSpa,
+  FaCapsules,
+  FaTemperatureLow,
+  FaClinicMedical,
+  FaFirstAid,
+  FaBaby,
+  FaDumbbell,
+} from "react-icons/fa";
+
 import abi from "./abi.json";
 
 export const contractAddress = "0x46Cc5737539a468Ef7B867Fe8e5e1AbE3Dc3393e";
@@ -28,36 +39,36 @@ export const nav_links = [
 
 export const filterTagLabels = [
   {
-    label: "All",
-  },
-
-  {
     label: "Medical Devices",
+    icon: FaHeartbeat,
   },
   {
     label: "Skin Care",
+    icon: FaSpa,
   },
-
   {
     label: "Vitamins & Supplements",
+    icon: FaCapsules,
   },
   {
     label: "Cold & Flu",
+    icon: FaTemperatureLow,
   },
   {
     label: "Allergy & Asthma",
+    icon: FaClinicMedical,
   },
-
   {
     label: "First Aid",
+    icon: FaFirstAid,
   },
-
   {
     label: "Mother & Baby Care",
+    icon: FaBaby,
   },
-
   {
     label: "Fitness & Nutrition",
+    icon: FaDumbbell,
   },
 ];
 
@@ -114,8 +125,42 @@ export const pharmacyProducts = [
   },
 ];
 
-export const productImages:{ 2: string; 3: string; 4: string } = {
+export const productImages: { 2: string; 3: string; 4: string } = {
   2: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731344869221-para.jpg",
   3: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731345723536-amoxa.jpg",
   4: "https://lkfzpfsdbbafjhqeijpk.supabase.co/storage/v1/object/public/images/images/1731350751603-lora.jpg",
+};
+
+export const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768, // Mobile devices
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480, // Small mobile devices
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };

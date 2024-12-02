@@ -1,5 +1,5 @@
-import ProductCard from "../components/ProductCard";
-import TitleBar from "../components/TitleBar";
+import ProductCard from "../components/products/ProductCard";
+import TitleBar from "../components/statics/TitleBar";
 import { imgURL, pharmacyProducts } from "../utils/constants";
 
 const CategoryDetailPage = () => {

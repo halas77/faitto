@@ -1,5 +1,5 @@
 import CategoryCard from "../components/CategoryCard";
-import TitleBar from "../components/TitleBar";
+import TitleBar from "../components/statics/TitleBar";
 import { filterTagLabels } from "../utils/constants";
 
 export interface ProductTypes {
@@ -25,6 +25,7 @@ const ProductsPage = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filterTagLabels.map((item, index) => (
             <CategoryCard
+              Icon={item.icon}
               title={item.label}
               desc="Lorem, ipsum dolor."
               key={index}

@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 const Ecommerce = () => {
   return (
     <div>
-      <section className="pt-28">
+      <section className="pt-20">
         <div className="mx-auto max-w-[83rem] px-4 sm:px-0 lg:px-0">
           <div className="xl:p-16 gap-32 p-8 lg:p-12 bg-gradient-to-r from-green-950 to-teal-900 rounded-3xl flex  justify-between flex-col-reverse lg:flex-row">
             <div className="w-full lg:w-2/3">

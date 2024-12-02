@@ -12,15 +12,21 @@ import {
 import { AiOutlineProduct } from "react-icons/ai";
 import { GrTransaction } from "react-icons/gr";
 import { imgURL } from "../utils/constants";
-import TimelineModal from "../components/TimelineModal";
 import { FaStar } from "react-icons/fa6";
-import ProductDetailSkeleton from "../components/ProductDetailSkeleton";
+import TimelineModal from "../components/products/TimelineModal";
+import Product from "../components/products/Product";
+import Loader2 from "../components/Loader2";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const BatchDetail = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState<ProductData | null>(null);
   const [batchData, setBatchData] = useState<ProductFormData | null>(null);
   const [loading, setLoading] = useState(false);
+  const [cartProducts, setCartProducts] = useState(() => {
+    const savedCart = localStorage.getItem("cartProducts");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
   const location = useLocation();
 
   const { batchId } = location.state || {};
@@ -52,18 +58,27 @@ const BatchDetail = () => {
     setBatchData(data);
     setLoading(false);
   };
+  interface ProductType {
+    id: string;
+    name: string;
+    price: string | number;
+  }
+  const addToCart = (product: ProductType) => {
+    setCartProducts((prevCart: any) => [...prevCart, product]);
+  };
 
   useEffect(() => {
     getProduct();
     getBatch();
-  }, []);
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }, [cartProducts]);
 
   return (
     <>
       {loading ? (
-        <ProductDetailSkeleton />
+        <Loader2 />
       ) : (
-        <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex items-center min-h-screen pt-20">
+        <section className="px-4  max-w-[83rem] mx-auto flex items-center pt-20">
           <div className="container mx-auto  bg-white rounded-3xl">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
               {/* Image Container */}
@@ -85,21 +100,27 @@ const BatchDetail = () => {
 
               {/* Data Section */}
               <div className="lg:col-span-3 flex flex-col  justify-start p-8 ">
-                <div className="flex gap-4 justify-end">
-                  <button
-                    onClick={() => setOpenModal(true)}
-                    className="flex items-center gap-2 px-4  text-xs font-semibold text-gray-600 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition duration-150"
-                  >
-                    View History
-                    <GoArrowUpRight className="w-4 h-4" />
-                  </button>
-                </div>
                 <p className="text-lg font-medium leading-8 text-green-600 mb-4">
                   {batchData?.batchName}&nbsp; /&nbsp; {productData?.productId}
                 </p>
-                <h2 className="text-2xl font-semibold text-gray-700">
-                  {productData?.productName}
-                </h2>
+                <div className="flex justify-between">
+                  <h2 className="text-2xl font-semibold text-gray-700">
+                    {productData?.productName}
+                  </h2>
+                  <button
+                    onClick={() =>
+                      addToCart({
+                        id: productData?.id || "",
+                        name: productData?.productName || "",
+                        price: productData?.price || "" || 0,
+                      })
+                    }
+                    className="flex items-center gap-2 px-4 text-sm font-semibold text-white py-2 bg-green-500 hover:bg-green-400 rounded-md transition duration-150"
+                  >
+                    <MdOutlineShoppingCart size={20} />
+                    Add to Cart
+                  </button>
+                </div>
 
                 <div className="flex flex-col sm:flex-row sm:items-center mb-6">
                   <h6 className="font-manrope font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5">
@@ -118,13 +139,22 @@ const BatchDetail = () => {
                     </span>
                   </div>
                 </div>
+                <div className="flex gap-4 justify-ed">
+                  <button
+                    onClick={() => setOpenModal(true)}
+                    className="flex items-center gap-2 px-4  text-xs font-semibold text-gray-600 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition duration-150"
+                  >
+                    View History
+                    <GoArrowUpRight className="w-4 h-4" />
+                  </button>
+                </div>
 
                 <p className="text-gray-600 py-4 text-sm">
                   {productData?.productDesc}
                 </p>
 
                 {/* Date/Time List */}
-                <div className="grid grid-cols-1  divide-y divide-gray-100 text-sm">
+                <div className="grid grid-cols-2  divide-y divide-gray-100 text-sm">
                   <div className="flex items-center gap-3 text-gray-600 py-4">
                     <HiOutlineIdentification
                       className="w-6 h-5 text-gray-500 rounded-full  />
@@ -180,6 +210,7 @@ const BatchDetail = () => {
           </div>
         </section>
       )}
+      <Product categoryName="A product category" />
     </>
   );
 };

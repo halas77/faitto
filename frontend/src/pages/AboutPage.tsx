@@ -1,10 +1,10 @@
-import About from "../components/About";
-import AboutCards from "../components/AboutCards";
-import Contact from "../components/Contact";
-import TitleBar from "../components/TitleBar";
+import AboutCards from "../components/statics/AboutCards";
+import TitleBar from "../components/statics/TitleBar";
 import { GoGoal } from "react-icons/go";
 import { GrPlan } from "react-icons/gr";
 import { GoRocket } from "react-icons/go";
+import About from "../components/statics/About";
+import Contact from "../components/statics/Contact";
 
 const AboutPage = () => {
   const aboutData = [

@@ -1,5 +1,5 @@
-import TitleBar from "../components/TitleBar";
-import Contact from "../components/Contact";
+import TitleBar from "../components/statics/TitleBar";
+import Contact from "../components/statics/Contact";
 
 const ContactPage = () => {
   return (

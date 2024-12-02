@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/statics/Header";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetail from "./pages/ProductDetail";
-import Footer from "./components/Footer";
+import Footer from "./components/statics/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactPage from "./pages/ContactPage";
 import ConnectWallet from "./components/ConnectWallet";

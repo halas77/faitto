@@ -2,9 +2,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GoArrowUpRight } from "react-icons/go";
 import { LuUser } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import { ProductHistoryType } from "../utils/types";
 import { useEffect, useState } from "react";
-import { getBatch } from "../contract/manageBatch";
+import { ProductHistoryType } from "../../utils/types";
+import { getBatch } from "../../contract/manageBatch";
 import TimelineSkeleton from "./TimelineSkeleton";
 
 const TimelineModal = ({

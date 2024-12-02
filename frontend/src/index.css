@@ -5,3 +5,17 @@
 body {
   font-family: Poppins;
 }
+
+.slick-prev:before, .slick-next:before {
+  color: green; 
+  font-size: 25px; 
+}
+
+.slick-prev {
+  left: -35px; 
+}
+
+.slick-next {
+  right: -30px;
+}
+
