@@ -5,6 +5,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { nav_links } from "../../utils/constants";
 import SearchBar from "../SearchBar";
 import { IoCartOutline } from "react-icons/io5";
+import { useMainContext } from "../../context/MainContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const { cartNumber } = useMainContext();
 
   return (
     <header className="fixed flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-2 top-0 left-0 bg-gray-50/80 backdrop-blur-md">
@@ -48,9 +49,9 @@ const Header = () => {
             <Link to="/cart" className="text-gray-800 text-2xl">
               <IoCartOutline />
             </Link>
-              <span className="absolute -top-2 -right-1 bg-green-600 text-white text-xs  rounded-full font-medium size-4 flex justify-center items-center">
-              0
-              </span>
+            <span className="absolute -top-2 -right-1 bg-green-600 text-white text-xs  rounded-full font-medium size-4 flex justify-center items-center">
+              {cartNumber}
+            </span>
           </div>
         </div>
 

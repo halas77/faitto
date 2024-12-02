@@ -1,5 +1,5 @@
 import { supabase } from "../supabaseClient";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ProductData, ProductFormData } from "../utils/types";
 import { FiUser } from "react-icons/fi";
@@ -17,20 +17,18 @@ import TimelineModal from "../components/products/TimelineModal";
 import Product from "../components/products/Product";
 import Loader2 from "../components/Loader2";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { useMainContext } from "../context/MainContext";
 
 const BatchDetail = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState<ProductData | null>(null);
   const [batchData, setBatchData] = useState<ProductFormData | null>(null);
   const [loading, setLoading] = useState(false);
-  const [cartProducts, setCartProducts] = useState(() => {
-    const savedCart = localStorage.getItem("cartProducts");
-    return savedCart ? JSON.parse(savedCart) : [];
-  });
+
+  const { setCartNumber, cartNumber } = useMainContext();
+
   const location = useLocation();
-
   const { batchId } = location.state || {};
-
   const [openModal, setOpenModal] = useState(false);
 
   const getProduct = async () => {
@@ -58,20 +56,18 @@ const BatchDetail = () => {
     setBatchData(data);
     setLoading(false);
   };
-  interface ProductType {
-    id: string;
-    name: string;
-    price: string | number;
-  }
-  const addToCart = (product: ProductType) => {
-    setCartProducts((prevCart: any) => [...prevCart, product]);
+
+  const navigate = useNavigate();
+
+  const handleAddCart = () => {
+    setCartNumber(cartNumber + 1);
+    navigate("/cart");
   };
 
   useEffect(() => {
     getProduct();
     getBatch();
-    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-  }, [cartProducts]);
+  }, []);
 
   return (
     <>
@@ -108,13 +104,7 @@ const BatchDetail = () => {
                     {productData?.productName}
                   </h2>
                   <button
-                    onClick={() =>
-                      addToCart({
-                        id: productData?.id || "",
-                        name: productData?.productName || "",
-                        price: productData?.price || "" || 0,
-                      })
-                    }
+                    onClick={handleAddCart}
                     className="flex items-center gap-2 px-4 text-sm font-semibold text-white py-2 bg-green-500 hover:bg-green-400 rounded-md transition duration-150"
                   >
                     <MdOutlineShoppingCart size={20} />

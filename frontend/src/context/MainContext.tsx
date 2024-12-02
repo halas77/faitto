@@ -32,6 +32,7 @@ export const MainProvider = ({ children }: { children: ReactNode }) => {
   const [account, setAccount] = useState<string>(
     "0xE365C98b2EA3233D491E49380c1269f81339cb86"
   );
+
   const [cartNumber, setCartNumber] = useState(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 

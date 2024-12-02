@@ -10,6 +10,7 @@ import ContactPage from "./pages/ContactPage";
 import ConnectWallet from "./components/ConnectWallet";
 import { MainProvider } from "./context/MainContext";
 import CategoryDetailPage from "./pages/CategoryDetailPage";
+import Cart from "./pages/Cart";
 
 function AppContent() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function AppContent() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/product/category/:id" element={<ProductDetail />} />
         <Route path="/product/category" element={<CategoryDetailPage />} />
       </Routes>
